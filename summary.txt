@@ -1,27 +1,28 @@
 1. Why did you choose the tools, libraries, and language you used for the coding exercise?
 
-I chose Python as the programming language because of its simplicity and versatility. Python is known for its readable syntax, which makes it easier to quickly develop and iterate over solutions. Additionally, Python has extensive library support for handling REST APIs, JSON, and HTTP requests, which fits well for this challenge.
+I picked Python because it's easy to read and write, which helps speed up development. It also has great libraries for handling APIs and JSON, making it a solid fit for this challenge.
 
-For the REST API framework, I selected Flask because it is lightweight, easy to set up, and provides all the functionality necessary to implement RESTful endpoints. Flask's simplicity makes it ideal for small to medium-sized projects, and it's easy to test with tools like `unittest` or `pytest`.
+For the API framework, I went with Flask. It's lightweight, quick to set up, and perfect for small to medium-sized projects like this one. Plus, it's easy to test using tools like `pytest`, which I used in my tester file.
 
-Overall, Flask and Python together provide an excellent balance between simplicity and functionality, making it a great choice for this challenge.
+Python and Flask work seamlessly together, and offer a simple and efficient solution. 
 
 2. What are the advantages and disadvantages of your solution?
 
 **Advantages:**
-- The solution is simple and easy to understand, making it accessible for other developers to maintain.
-- It is built using Flask, which is lightweight and fast for smaller projects like this one.
-- The API is fully functional, covering all the requirements, including adding points, spending points (using the oldest first), and fetching the balance.
-- The solution uses in-memory storage, which is very fast for testing and small-scale use.
-- The code is modular and can easily be extended or modified to support more features or scalability.
+- The solution is simple and easy to maintain.
+- Flask is fast and lightweight, making it ideal for smaller projects.
+- The API covers all the necessary features: adding points, spending them, and checking the balance.
+- The code is modular and easy to extend if needed.
+- In-memory storage makes it fast and great for testing purposes.
+
 
 **Disadvantages:**
-- The use of in-memory storage (like a `deque` and `defaultdict`) means that the data will be lost when the server is restarted. In a real-world scenario, we would need to integrate a database (e.g., PostgreSQL, MySQL) for persistent storage.
-- Flask is ideal for small projects, but as the application scales, it may not handle more complex tasks as efficiently as heavier frameworks like Django or a more robust solution with async capabilities (such as FastAPI).
-- There's no concurrency support in this implementation. With high traffic, we might need to consider scaling solutions like load balancing or using a more scalable infrastructure.
+- Using in-memory storage means data is lost when the server restarts. In production, a persistent database like PostgreSQL or MySQL would be needed, and I would probably opt for PostgreSQL for its additional features like advanced indexing, better concurrency handling, and support for complex queries.
+- Flask works well for small projects, but larger or more complex apps might benefit from something more robust like Django, which I also have experience with. 
+- The app doesn't support handling multiple requests at the same time, so under heavy traffic, it might struggle. In production, I would use load balancing, async processing, or more scalable infrastructure to fix this.
 
 3. What has been a favorite school/personal project thus far? What about it that challenged you?
 
-One of my favorite projects was building a movie recommendation engine that leverages machine learning algorithms to suggest movies based on user preferences. This project challenged me in multiple ways, including gathering and preprocessing real-world data, working with collaborative filtering techniques, and integrating my recommendation system with a web app using Flask.
+One of my favorite projects was building a movie recommendation system using Django, React, and scikit-learn. It allowed users to rate movies, and the system would suggest similar films based on those ratings. It also utilized JWT authentication, and PostgreSQL for the database. 
 
-The most challenging part was fine-tuning the machine learning model to make accurate predictions. I had to iterate over different algorithms, tune hyperparameters, and ensure that the recommendation system would handle new users or sparse data efficiently. Another challenge was ensuring that the recommendation system could scale, especially with the increasing number of users and movies. It pushed me to think not just about algorithms, but about performance optimization and scaling as well.
+One thing that challenged me was integrating different technologies together and getting it all hosted for free. Staying organized was key to managing the different components—like the React frontend, Django backend, and PostgreSQL database—while ensuring smooth interaction between them. I also had to carefully optimize the deployment process, using platforms like Heroku and Vercel to host the app without incurring costs. Balancing functionality with the limitations of free hosting options was a valuable learning experience.
