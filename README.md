@@ -6,19 +6,19 @@ This is a Flask-based REST API that allows you to add points, spend points, and 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/JustinKim13/Fetch-Backend-Exercise.git`
+   git clone https://github.com/JustinKim13/Fetch-Backend-Exercise.git
    ```
 3. Move into the correct directory:
    ```bash
-   cd fetch-backend-exercise`
+   cd fetch-backend-exercise
    ```
 5. Install the required dependencies:
 6. ```bash
-   pip install -r requirements.txt`
+   pip install -r requirements.txt
    ```
 7. Run the app:
 8. ```bash
-   python app.py`
+   python app.py
    ```
 
 The app will start on port 8000 by default.
