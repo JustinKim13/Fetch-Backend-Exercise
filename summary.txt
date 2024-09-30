@@ -1,0 +1,27 @@
+1. Why did you choose the tools, libraries, and language you used for the coding exercise?
+
+I chose Python as the programming language because of its simplicity and versatility. Python is known for its readable syntax, which makes it easier to quickly develop and iterate over solutions. Additionally, Python has extensive library support for handling REST APIs, JSON, and HTTP requests, which fits well for this challenge.
+
+For the REST API framework, I selected Flask because it is lightweight, easy to set up, and provides all the functionality necessary to implement RESTful endpoints. Flask's simplicity makes it ideal for small to medium-sized projects, and it's easy to test with tools like `unittest` or `pytest`.
+
+Overall, Flask and Python together provide an excellent balance between simplicity and functionality, making it a great choice for this challenge.
+
+2. What are the advantages and disadvantages of your solution?
+
+**Advantages:**
+- The solution is simple and easy to understand, making it accessible for other developers to maintain.
+- It is built using Flask, which is lightweight and fast for smaller projects like this one.
+- The API is fully functional, covering all the requirements, including adding points, spending points (using the oldest first), and fetching the balance.
+- The solution uses in-memory storage, which is very fast for testing and small-scale use.
+- The code is modular and can easily be extended or modified to support more features or scalability.
+
+**Disadvantages:**
+- The use of in-memory storage (like a `deque` and `defaultdict`) means that the data will be lost when the server is restarted. In a real-world scenario, we would need to integrate a database (e.g., PostgreSQL, MySQL) for persistent storage.
+- Flask is ideal for small projects, but as the application scales, it may not handle more complex tasks as efficiently as heavier frameworks like Django or a more robust solution with async capabilities (such as FastAPI).
+- There's no concurrency support in this implementation. With high traffic, we might need to consider scaling solutions like load balancing or using a more scalable infrastructure.
+
+3. What has been a favorite school/personal project thus far? What about it that challenged you?
+
+One of my favorite projects was building a movie recommendation engine that leverages machine learning algorithms to suggest movies based on user preferences. This project challenged me in multiple ways, including gathering and preprocessing real-world data, working with collaborative filtering techniques, and integrating my recommendation system with a web app using Flask.
+
+The most challenging part was fine-tuning the machine learning model to make accurate predictions. I had to iterate over different algorithms, tune hyperparameters, and ensure that the recommendation system would handle new users or sparse data efficiently. Another challenge was ensuring that the recommendation system could scale, especially with the increasing number of users and movies. It pushed me to think not just about algorithms, but about performance optimization and scaling as well.
